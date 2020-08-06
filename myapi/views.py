@@ -19,6 +19,8 @@ class AirplaneSolutionAPIView(views.APIView):
         JSONParser
     ]
 
+    # Time Complexity: O(N) where N is the size of the smallest list
+    # Space Complexity: O(N) where N is the size of the smallest list
     def get(self, request, *args, **kwargs):
         id_list = request.GET.get('id_list') or None
         passenger_list = request.GET.get('passenger_list') or None
