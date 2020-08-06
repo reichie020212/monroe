@@ -49,7 +49,7 @@
 
 ### Coverage
 	coverage run myapi/functions.py
-	cover report -m
+	coverage report -m
 
 ### Explanation
 	id_list and passenger_list values are partnered with respect to their index position
