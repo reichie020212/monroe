@@ -22,6 +22,9 @@ class AirplaneSolutionAPIView(views.APIView):
     def get(self, request, *args, **kwargs):
         id_list = request.GET.get('id_list') or None
         passenger_list = request.GET.get('passenger_list') or None
+
+        # ast.literal_eval coverts a string of list to list
+        # For example: "[1, 2]" will convert to [1, 2]
         try:
             id_list = ast.literal_eval(id_list)
         except Exception:
